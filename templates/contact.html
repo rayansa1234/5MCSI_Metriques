@@ -1,34 +1,105 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Contactez-moi</title>
-    <style>
-        body { font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; }
-        .container { max-width: 600px; margin: auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h2 { color: #333; border-bottom: 2px solid #5cb85c; padding-bottom: 10px; }
-        label { display: block; margin-top: 15px; font-weight: bold; }
-        input[type="text"], textarea { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
-        button { background-color: #5cb85c; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; margin-top: 20px; }
-        button:hover { background-color: #4cae4c; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #74b9ff, #a29bfe);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background: white;
+      width: 380px;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      animation: fadeIn 0.6s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2d3436;
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 10px;
+      display: block;
+      color: #2d3436;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 1px solid #b2bec3;
+      font-size: 14px;
+      transition: 0.2s;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #6c5ce7;
+      box-shadow: 0 0 5px rgba(108,92,231,0.5);
+      outline: none;
+    }
+
+    textarea {
+      height: 100px;
+      resize: none;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 20px;
+      padding: 12px;
+      background: #6c5ce7;
+      border: none;
+      color: white;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #4834d4;
+    }
+  </style>
 </head>
+
 <body>
-    <div class="container">
-        <h2>📧 Laissez-moi un message</h2>
-        <form>
-            <label for="nom">Nom :</label>
-            <input type="text" id="nom" name="nom" required>
+  <div class="container">
+    <h1>Contactez-moi</h1>
 
-            <label for="prenom">Prénom :</label>
-            <input type="text" id="prenom" name="prenom" required>
+    <form>
+      <label>Nom :</label>
+      <input type="text" placeholder="Entrez votre nom">
 
-            <label for="message">Votre Message :</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+      <label>Prénom :</label>
+      <input type="text" placeholder="Entrez votre prénom">
 
-            <button type="submit">Envoyer (Simulation)</button>
-            <p style="margin-top: 20px; font-size: 0.9em; color: #777;">*L'enregistrement des données n'est pas actif pour cet exercice.</p>
-        </form>
-    </div>
+      <label>Message :</label>
+      <textarea placeholder="Votre message..."></textarea>
+
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
 </body>
 </html>
